@@ -1,0 +1,68 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 0,
+            "failed": 4,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1784221510.2585614,
+            "stop": 1784221510.270729
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_report_is_valid_json_object",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00036745900000312304,
+                "start": 1784221510.2645094,
+                "stop": 1784221510.2677176,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_report_is_valid_json_object():\n        \"\"\"Criterion 1: /app/report.json exists and contains a valid JSON object.\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"criterion 1: /app/report.json was not produced\"\nE       AssertionError: criterion 1: /app/report.json was not produced\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:15: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_total_requests",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00028487399998766705,
+                "start": 1784221510.267783,
+                "stop": 1784221510.268702,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_total_requests():\n        \"\"\"Criterion 2: total_requests matches the actual number of request lines.\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"criterion 1: /app/report.json was not produced\"\nE       AssertionError: criterion 1: /app/report.json was not produced\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:15: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_unique_ips",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00026750000000674845,
+                "start": 1784221510.2687554,
+                "stop": 1784221510.2696257,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_unique_ips():\n        \"\"\"Criterion 3: unique_ips matches the actual number of distinct client IPs.\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:34: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"criterion 1: /app/report.json was not produced\"\nE       AssertionError: criterion 1: /app/report.json was not produced\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:15: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_top_path",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00025691600001209736,
+                "start": 1784221510.2696865,
+                "stop": 1784221510.2706301,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_top_path():\n        \"\"\"Criterion 4: top_path matches the actual most-requested path.\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:40: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"criterion 1: /app/report.json was not produced\"\nE       AssertionError: criterion 1: /app/report.json was not produced\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:15: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

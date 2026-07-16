@@ -1,0 +1,87 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 4 items
+
+../tests/test_outputs.py FFFF                                            [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_report_is_valid_json_object _______________________
+
+    def test_report_is_valid_json_object():
+        """Criterion 1: /app/report.json exists and contains a valid JSON object."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "criterion 1: /app/report.json was not produced"
+E       AssertionError: criterion 1: /app/report.json was not produced
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:15: AssertionError
+_____________________________ test_total_requests ______________________________
+
+    def test_total_requests():
+        """Criterion 2: total_requests matches the actual number of request lines."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "criterion 1: /app/report.json was not produced"
+E       AssertionError: criterion 1: /app/report.json was not produced
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:15: AssertionError
+_______________________________ test_unique_ips ________________________________
+
+    def test_unique_ips():
+        """Criterion 3: unique_ips matches the actual number of distinct client IPs."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "criterion 1: /app/report.json was not produced"
+E       AssertionError: criterion 1: /app/report.json was not produced
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:15: AssertionError
+________________________________ test_top_path _________________________________
+
+    def test_top_path():
+        """Criterion 4: top_path matches the actual most-requested path."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "criterion 1: /app/report.json was not produced"
+E       AssertionError: criterion 1: /app/report.json was not produced
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:15: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_report_is_valid_json_object - Assertion...
+FAILED ../tests/test_outputs.py::test_total_requests - AssertionError: criter...
+FAILED ../tests/test_outputs.py::test_unique_ips - AssertionError: criterion ...
+FAILED ../tests/test_outputs.py::test_top_path - AssertionError: criterion 1:...
+============================== 4 failed in 0.01s ===============================
